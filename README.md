@@ -1,77 +1,70 @@
-Proyecto grupal realizado durante el bootcamp de Adalab
-Promo Mileva. Mayo 2021
+# Getting Started with Create React App
 
-El proyecto consiste en la realización de una web interactiva que permite la realización de tarjetas de visita online.
-El mundo ha cambiado, y la tecnología es algo inherente en las relaciones sociales, y también laborales
-A través de esta aplicación, el usuario puede diseñar una tarjeta de visita funcionall para mostrar su experiencia laboral, y los datos necesarios para ampliar sured contactos.
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-Para la realización de este proyecto se ha utilizado -el Adalab Web starter kit](https://github.com/Adalab/Adalab-web-starter-kit), creado por la asociación Adalab. (creado con node y gulp) ¿Y qué es un Starter kit? Pues es una plantilla de proyecto con funcionalidades preinstaladas y preconfiguradas.
+## Available Scripts
 
-## Resultado
+In the project directory, you can run:
 
-Si quieres ver el resultado final , puedes acceder desde aquí:
+### `npm start`
 
-http://beta.adalab.es/project-promo-m-module-2-team-8/
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-1.Clonar el repositorio https://github.com/Adalab/project-promo-m-module-2-team-8.git
+The page will reload if you make edits.\
+You will also see any lint errors in the console.
 
-#### Clonar proyecto
+### `npm test`
 
-### Pasos a seguir
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-1. Clona este repositorio
-2. **Instala las dependencias** locales ejecutando en la terminal el comando:
+### `npm run build`
 
-````bash
-npm install
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-3. **Abre una terminal** en la carpeta raíz de tu repositorio.
-4. **Instala las dependencias** locales ejecutando en la terminal el comando:
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
 
-```bash
-npm install
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-5. Por último, ejecuta el siguiente comando para  la visualización:
+### `npm run eject`
 
-```bash
-npm start
-````
+**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-Este comando abre una ventana de Chrome y muestra tu página web\*\*, al igual que hace el plugin de VS Code Live Server (Go live).
+If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Por último...........Proyecto
-También tienes la opción de clonar el repositorio para mirar el código desde tu editor
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-> **NOTA:** Necesitas tener instalado [Node JS](https://nodejs.org/) para trabajar con este Starter Kit:
+You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-### Pasos a seguir
+## Learn More
 
-1. Clona este repositorio
-2. **Instala las dependencias** locales ejecutando en la terminal el comando:
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-````bash
-npm install
+To learn React, check out the [React documentation](https://reactjs.org/).
 
-3. **Abre una terminal** en la carpeta raíz de tu repositorio.
-4. **Instala las dependencias** locales ejecutando en la terminal el comando:
+### Code Splitting
 
-```bash
-npm install
-````
+This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-5. Por último, ejecuta el siguiente comando para la visualización:
+### Analyzing the Bundle Size
 
-```bash
-npm start
-```
+This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-Este comando abre una ventana de Chrome y muestra tu página web\*\*, al igual que hace el plugin de VS Code Live Server (Go live).
+### Making a Progressive Web App
 
-Por último...........
-Si tienes cualquier sugerencis, no dudes en hacer PR!! toda posibilidad de mejora es bienvenida!!:)
+This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
-Componentes
-Paula Albo
-Marina Benítez
-Lucía Cano
-Maribel Torres
+### Advanced Configuration
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+
+### Deployment
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+
+### `npm run build` fails to minify
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
