@@ -1,5 +1,6 @@
 import "../stylesheet/App.scss";
 import React from "react";
+import Footer from "./Footer";
 //import React, { Component } from "react";
 
 class App extends React.Component {
@@ -257,12 +258,7 @@ class App extends React.Component {
           </form>
         </main>
         <footer className="footer">
-          <small className="copy "> Awesome profile cards @ 2021 </small>
-          <img
-            className="logo-adalab"
-            src="../images/logo-adalab.png"
-            alt="logo logo-adalab"
-          />
+          <Footer />
         </footer>
       </>
     );
