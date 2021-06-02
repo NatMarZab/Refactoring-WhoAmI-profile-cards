@@ -1,6 +1,7 @@
 import Design from "./Design";
 import Fill from "./Fill";
 import Share from "./Share";
+// Aquí importaríamos los Collapsables
 
 function Form() {
   return (
