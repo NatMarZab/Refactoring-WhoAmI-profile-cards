@@ -8,17 +8,19 @@ function Fill() {
         <i className="fas fa-chevron-up details-up"></i>
       </div>
       <div className="details__form">
-        <label className="details__fullName-form" for="fullName">
-          Nombre completo *
-        </label>
-        <input
-          className="details__fullName-fieldSpace"
-          id="name"
-          type="text"
-          name="fullName"
-          title="fullName"
-          placeholder="Ej: Sally Hill"
-        />
+        <Input>
+          <label className="details__fullName-form" for="fullName">
+            Nombre completo *
+          </label>
+          <input
+            className="details__fullName-fieldSpace"
+            id="name"
+            type="text"
+            name="fullName"
+            title="fullName"
+            placeholder="Ej: Sally Hill"
+          ></input>
+        </Input>
         <label className="details__workTitle-form" for="workTitle">
           Puesto *
         </label>
