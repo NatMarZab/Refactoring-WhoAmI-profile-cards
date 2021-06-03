@@ -1,7 +1,7 @@
-import Design from "./Design";
+import Design from "./Design.js";
 import Fill from "./Fill";
-import Share from "./Share";
-// Aquí importaríamos los Collapsables
+import Share from "./Share.js";
+// // Aquí importaríamos los Collapsables
 
 function Form() {
   return (

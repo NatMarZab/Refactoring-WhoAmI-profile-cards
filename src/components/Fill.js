@@ -7,20 +7,19 @@ function Fill() {
         </legend>
         <i className="fas fa-chevron-up details-up"></i>
       </div>
+
       <div className="details__form">
-        <Input>
-          <label className="details__fullName-form" for="fullName">
-            Nombre completo *
-          </label>
-          <input
-            className="details__fullName-fieldSpace"
-            id="name"
-            type="text"
-            name="fullName"
-            title="fullName"
-            placeholder="Ej: Sally Hill"
-          ></input>
-        </Input>
+        <label className="details__fullName-form" for="fullName">
+          Nombre completo *
+        </label>
+        <input
+          className="details__fullName-fieldSpace"
+          id="name"
+          type="text"
+          name="fullName"
+          title="fullName"
+          placeholder="Ej: Sally Hill"
+        />
         <label className="details__workTitle-form" for="workTitle">
           Puesto *
         </label>
@@ -35,23 +34,29 @@ function Fill() {
         <label className="details__photo-form" for="photo">
           Imagen de perfil *
         </label>
-        <div className="action">
-          <label className="details__photo-button" for="img-selector">
-            Añadir imagen
-          </label>
-          <input
-            type="file"
-            name="photo"
-            id="img-selector"
-            className="action__hiddenField js__profile-upload-btn"
-          />
-          <div
+
+        {/* <div className="action"> */}
+        <label className="details__photo-button" for="img-selector">
+          Añadir imagen
+        </label>
+        <input
+          type="file"
+          name="photo"
+          id="img-selector"
+          className="action__hiddenField js__profile-upload-btn"
+        />
+
+        {/* //HASTA AQUÍ FUNCIONA */}
+
+        {/* <div
             className="profile__image js__profile-image details__photo-preview"
             style="
-                  background-image: url(https://www.w3schools.com/howto/img_avatar2.png);
-                "
+            background-image: url(https://www.w3schools.com/howto/img_avatar2.png);
+          "
           ></div>
-        </div>
+        </div>*/}
+
+        {/* //A PARTIR DE AQUÍ FUNCIONA */}
         <label className="details__email-form" for="email">
           Email *
         </label>

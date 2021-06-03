@@ -1,5 +1,6 @@
-import CardPreview from './CardPreview';
-import Form from './Form';
+import "../stylesheet/App.scss";
+import CardPreview from "./CardPreview.js";
+import Form from "./Form.js";
 
 function Main() {
   return (

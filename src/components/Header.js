@@ -1,6 +1,5 @@
 import LogoHeader from "../images/logo-header.png";
-import "../stylesheet/layout/header.scss";
-import "../stylesheet/core/_variables.scss";
+import "../stylesheet/App.scss";
 
 function Header() {
   return (

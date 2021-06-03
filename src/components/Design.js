@@ -1,4 +1,4 @@
-//Aquí importaríamos Palette.
+// //Aquí importaríamos Palette.
 
 function Design() {
   return (
@@ -17,8 +17,7 @@ function Design() {
       <div className="colors_design">
         <h3 className="colorstitle">Colores</h3>
         <div className="palette">
-          
-        {/* Aquí llamaríamos 3 veces a Palette con sus props 
+          {/* Aquí llamaríamos 3 veces a Palette con sus props
         para cada una de las opciones de palette.
         Después habría que borrar las 2 ul de abajo ("opt2color" y "opt3color").  */}
 
