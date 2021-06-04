@@ -1,5 +1,7 @@
 // //Aquí importaríamos Palette.
 
+import Palette from "./Palette";
+
 function Design() {
   return (
     <fieldset className="colors">
@@ -17,17 +19,22 @@ function Design() {
       <div className="colors_design">
         <h3 className="colorstitle">Colores</h3>
         <div className="palette">
+          <ul className="optionColor">
+            <Palette value="1" className="js-CHeckColor1" id="palets"></Palette>
+            <li className="opt1-1"></li>
+            <li className="opt1-2"></li>
+            <li className="opt1-3"></li>
+          </ul>
+
           {/* Aquí llamaríamos 3 veces a Palette con sus props
         para cada una de las opciones de palette.
         Después habría que borrar las 2 ul de abajo ("opt2color" y "opt3color").  */}
           <ul className="opt1color">
             <label for="palets">
               <input
-                type="radio"
                 value="1"
                 className="choosecolor js-CHeckColor1"
                 id="palets"
-                name="palette"
               />
             </label>
             <li className="opt1-1"></li>
@@ -37,11 +44,9 @@ function Design() {
           <ul className="opt2color">
             <label for="palets1">
               <input
-                type="radio"
                 value="2"
                 className="choosecolor js-CHeckColor2"
                 id="palets1"
-                name="palette"
               />
             </label>
             <li className="opt2-1"></li>
@@ -51,11 +56,9 @@ function Design() {
           <ul className="opt3color">
             <label for="palets2">
               <input
-                type="radio"
                 value="3"
                 className="choosecolor js-CHeckColor3"
                 id="palets2"
-                name="palette"
               />
             </label>
             <li className="opt3-1"></li>

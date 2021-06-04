@@ -1,3 +1,5 @@
+import Input from "./Input";
+
 function Fill() {
   return (
     <fieldset className="details">
@@ -9,34 +11,27 @@ function Fill() {
       </div>
 
       <div className="details__form">
-        <label className="details__fullName-form" for="fullName">
-          Nombre completo *
-        </label>
-        <input
-          className="details__fullName-fieldSpace"
+        <Input
+          text="Nombre completo *"
           id="name"
-          type="text"
           name="fullName"
           title="fullName"
           placeholder="Ej: Sally Hill"
         />
-        <label className="details__workTitle-form" for="workTitle">
-          Puesto *
-        </label>
-        <input
-          className="details__workTitle-fieldSpace"
+        <Input
+          text="Puesto *"
           id="work"
-          type="text"
           name="workTitle"
           title="workTitle"
           placeholder="Ej: Front-end unicorn"
         />
-        <label className="details__photo-form" for="photo">
+
+        <label className="details__label" htmlFor="photo">
           Imagen de perfil *
         </label>
 
         <div className="action">
-          <label className="details__photo-button" for="img-selector">
+          <label className="details__photo-button" htmlFor="img-selector">
             Añadir imagen
           </label>
           <input
@@ -54,49 +49,32 @@ function Fill() {
           ></div>
         </div>
 
-        {/* //A PARTIR DE AQUÍ FUNCIONA */}
-        <label className="details__email-form" for="email">
-          Email *
-        </label>
-        <input
-          className="details__email-fieldSpace"
-          type="text"
-          name="email"
+        <Input
+          text="Email *"
           id="email"
+          name="email"
           title="email"
           placeholder="Ej: Sally-hill@gmail.com"
         />
-        <label className="details__phone-form" for="phone">
-          Teléfono
-        </label>
-        <input
-          className="details__phone-fieldSpace"
-          type="text"
-          name="phone"
+        <Input
+          text="Teléfono"
           id="phone"
+          name="phone"
           title="phone"
           placeholder="Ej: 555-55-55-55"
         />
-        <label className="details__linkedin-form" for="linkedin">
-          Linkedin *
-        </label>
-        <input
-          className="details__linkedin-fieldSpace"
+        <Input
+          text="LinkedIn *"
           id="linkedin"
-          type="text"
           name="linkedin"
           title="linkedin"
           placeholder="Ej: linkedin.com/in/sally.hill"
         />
-        <label className="details__github-form" for="github">
-          Github *
-        </label>
-        <input
-          className="details__github-fieldSpace"
+        <Input
+          text="Github *"
           id="github"
-          type="text"
-          title="github"
           name="github"
+          title="github"
           placeholder="Ej: @sally-hill"
         />
       </div>

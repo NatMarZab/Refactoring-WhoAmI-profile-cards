@@ -77,27 +77,7 @@ fieldset {
   margin-left: 39px;
 }
 
-.opt1color {
-  width: 90px;
-  height: 25px;
-  border: solid 1px;
-  display: flex;
-  flex-direction: row;
-  margin-bottom: 20px;
-  border: thin;
-}
-
-.opt2color {
-  width: 90px;
-  height: 25px;
-  border: solid 1px;
-  display: flex;
-  flex-direction: row;
-  margin-bottom: 20px;
-  border: thin;
-}
-
-.opt3color {
+.optionColor {
   width: 90px;
   height: 25px;
   border: solid 1px;
@@ -200,7 +180,7 @@ fieldset {
   flex-direction: column;
 }
 
-.details__fullName-form {
+.details__label {
   font-family: $font-main;
   font-size: $normalsize;
   line-height: 1.43;
@@ -208,21 +188,7 @@ fieldset {
   margin-bottom: 7px;
 }
 
-.details__fullName-fieldSpace {
-  border: solid 1px $color-hospitalgreen;
-  height: 30px;
-  margin-bottom: 20px;
-}
-
-.details__workTitle-form {
-  font-family: $font-main;
-  font-size: $normalsize;
-  line-height: 1.43;
-  color: $color-green;
-  margin-bottom: 7px;
-}
-
-.details__workTitle-fieldSpace {
+.details__input {
   border: solid 1px $color-hospitalgreen;
   height: 30px;
   margin-bottom: 20px;
@@ -231,14 +197,6 @@ fieldset {
 .details__photo {
   display: flex;
   flex-direction: column;
-}
-
-.details__photo-form {
-  font-family: $font-main;
-  font-size: $normalsize;
-  line-height: 1.43;
-  color: $color-green;
-  margin-bottom: 7px;
 }
 
 .details__photo-preview {
@@ -273,62 +231,6 @@ fieldset {
 .action {
   display: flex;
   flex-direction: row;
-}
-
-.details__email-form {
-  font-family: $font-main;
-  font-size: $normalsize;
-  line-height: 1.43;
-  color: $color-green;
-  margin-bottom: 7px;
-}
-
-.details__email-fieldSpace {
-  border: solid 1px $color-hospitalgreen;
-  height: 30px;
-  margin-bottom: 20px;
-}
-
-.details__phone-form {
-  font-family: $font-main;
-  font-size: $normalsize;
-  line-height: 1.43;
-  color: $color-green;
-  margin-bottom: 7px;
-}
-
-.details__phone-fieldSpace {
-  border: solid 1px $color-hospitalgreen;
-  height: 30px;
-  margin-bottom: 20px;
-}
-
-.details__linkedin-form {
-  font-family: $font-main;
-  font-size: $normalsize;
-  line-height: 1.43;
-  color: $color-green;
-  margin-bottom: 7px;
-}
-
-.details__linkedin-fieldSpace {
-  border: solid 1px $color-hospitalgreen;
-  height: 30px;
-  margin-bottom: 20px;
-}
-
-.details__github-form {
-  font-family: $font-main;
-  font-size: $normalsize;
-  line-height: 1.43;
-  color: $color-green;
-  margin-bottom: 7px;
-}
-
-.details__github-fieldSpace {
-  border: solid 1px $color-hospitalgreen;
-  height: 30px;
-  margin-bottom: 30px;
 }
 
 .share {
