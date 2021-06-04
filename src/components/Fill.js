@@ -35,26 +35,24 @@ function Fill() {
           Imagen de perfil *
         </label>
 
-        {/* <div className="action"> */}
-        <label className="details__photo-button" for="img-selector">
-          Añadir imagen
-        </label>
-        <input
-          type="file"
-          name="photo"
-          id="img-selector"
-          className="action__hiddenField js__profile-upload-btn"
-        />
+        <div className="action">
+          <label className="details__photo-button" for="img-selector">
+            Añadir imagen
+          </label>
+          <input
+            type="file"
+            name="photo"
+            id="img-selector"
+            className="action__hiddenField js__profile-upload-btn"
+          />
 
-        {/* //HASTA AQUÍ FUNCIONA */}
+          {/* //HASTA AQUÍ FUNCIONA */}
 
-        {/* <div
+          <div
             className="profile__image js__profile-image details__photo-preview"
-            style="
-            background-image: url(https://www.w3schools.com/howto/img_avatar2.png);
-          "
+            style={{ backgroundImage: "" }}
           ></div>
-        </div>*/}
+        </div>
 
         {/* //A PARTIR DE AQUÍ FUNCIONA */}
         <label className="details__email-form" for="email">
