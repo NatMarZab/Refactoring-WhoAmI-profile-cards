@@ -2,10 +2,10 @@
 
 const createButton = document.querySelector(".js_share_card_button");
 const previewUrl = document.querySelector(".preview__url");
-const previewSection = document.querySelector("preview");
+// const previewSection = document.querySelector("preview");
 const twiterButton = document.querySelector(".preview__button");
-const previewCard = document.querySelector(".js_preview_card");
-const shareContain = document.querySelector(".js-containerShare");
+// const previewCard = document.querySelector(".js_preview_card");
+// const shareContain = document.querySelector(".js-containerShare");
 const errorMsg = document.querySelector(".js-error");
 const whatsappPreviewBtn = document.querySelector(".js-telefono");
 const emailPreviewBtn = document.querySelector(".js-mail");
@@ -14,7 +14,7 @@ const gitPreviewBtn = document.querySelector(".js-git");
 
 function handlerCreateCard(ev) {
   ev.preventDefault();
-  
+
   let breakFunction = false;
   for (let input in data) {
     if (data[input] === "") {
@@ -23,7 +23,7 @@ function handlerCreateCard(ev) {
     }
   }
   // salte inmediatamente de la funcion
-  if(breakFunction) return;
+  if (breakFunction) return;
 
   const url = "https://awesome-profile-cards.herokuapp.com/card";
   fetch(url, {
@@ -35,10 +35,9 @@ function handlerCreateCard(ev) {
   })
     .then((response) => response.json())
     .then((data) => {
-
       if (data.success === true) {
-        previewCard.classList.remove("preview__card");
-        shareContain.classList.add("preview__card");
+        // previewCard.classList.remove("preview__card");
+        // shareContain.classList.add("preview__card");
         previewUrl.innerHTML = data.cardURL;
         previewUrl.href = data.cardURL;
         twiterButton.href = `https://twitter.com/?lang=es= + ${data.cardURL}`;
@@ -46,14 +45,15 @@ function handlerCreateCard(ev) {
         emailPreviewBtn.href = `mailto: + ${data.email}`;
         linkedinPreviewBtn.href = `https://www.linkedin.com/in/ + ${data.linkedin}`;
         gitPreviewBtn.href = `https://github.com/ + ${data.github}`;
-        createButton.setAttribute("disabled", "disabled");
+        // createButton.setAttribute("disabled", "disabled");
         saveLocalStorage();
-        handleTwitterButtonShare()
+        handleTwitterButtonShare();
       } else {
-        console.log('esta mal')
+        console.log("esta mal");
       }
-    }).catch((error) => {
-      console.log(error)
+    })
+    .catch((error) => {
+      console.log(error);
     });
 }
 createButton.addEventListener("click", handlerCreateCard);

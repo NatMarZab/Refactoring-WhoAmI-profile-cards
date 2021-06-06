@@ -8,7 +8,7 @@ function Form() {
     <form className="form js-form" action="#" id="resetform">
       <Design />
       <Fill />
-      <Share />
+      <Share showButtons />
     </form>
   );
 }
