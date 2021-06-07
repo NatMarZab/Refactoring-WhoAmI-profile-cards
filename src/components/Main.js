@@ -1,6 +1,5 @@
-// import "../stylesheet/App.scss";
-import Card from "./Card";
 import Form from "./Form.js";
+import Card from "./Card";
 
 function Main() {
   return (
@@ -14,6 +13,3 @@ function Main() {
 }
 
 export default Main;
-
-// He sustituído <CardPreview /> por <Card />
-// porque si no, no aparecía el botón de Reset.
