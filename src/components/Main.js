@@ -1,4 +1,4 @@
-import "../stylesheet/App.scss";
+// import "../stylesheet/App.scss";
 import CardPreview from "./CardPreview.js";
 import Form from "./Form.js";
 
