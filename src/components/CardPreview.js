@@ -1,7 +1,4 @@
 import React from "react";
-import "../stylesheet/core/_variables.scss";
-import "../stylesheet/layout/_maincontent1.scss";
-import SocialMedia from "./SocialMedia";
 
 function CardPreview() {
   return (
@@ -13,7 +10,20 @@ function CardPreview() {
             <h3 className="maincontainer1__subtitle js-job">Front-end developer</h3>
           </div>
           <div className="maincontainer1__img js__profile-preview js__border-palette"></div>
-          
+          <nav className="maincontainer1__links-container js-footerpreview">
+        <a href="" className="maincontainer1__links js-telefono js__link__radius">
+            <i className="fas fa-mobile-alt js__link__pallete"></i>
+        </a>
+        <a href="" className="maincontainer1__links js-mail js__link__radius">
+            <i className="far fa-envelope js__link__pallete"></i>
+        </a>
+        <a href="" className="maincontainer1__links js-linkedin js__link__radius">
+            <i className="fab fa-linkedin-in js__link__pallete"></i>
+        </a>
+        <a href="" className="maincontainer1__links js-git js__link__radius">
+            <i className="fab fa-github-alt js__link__pallete"></i>
+        </a>
+        </nav>
         </div>
   );
 }
