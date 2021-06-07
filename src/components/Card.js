@@ -1,5 +1,5 @@
 import React from "react";
-import "../stylesheet/core/_variables.scss";
+
 import "../stylesheet/layout/_maincontent1.scss";
 import CardPreview from "./CardPreview";
 import ResetBtn from "./ResetBtn";
@@ -10,6 +10,7 @@ function Card() {
       <section className="maincontainer1">
         <ResetBtn/>
         <CardPreview/>
+        <SocialMedia/>
       </section>
     )
 }

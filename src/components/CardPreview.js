@@ -13,7 +13,7 @@ function CardPreview() {
             <h3 className="maincontainer1__subtitle js-job">Front-end developer</h3>
           </div>
           <div className="maincontainer1__img js__profile-preview js__border-palette"></div>
-          <SocialMedia />
+          
         </div>
   );
 }
