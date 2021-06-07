@@ -1,12 +1,12 @@
 // import "../stylesheet/App.scss";
-import CardPreview from "./CardPreview.js";
+import Card from "./Card";
 import Form from "./Form.js";
 
 function Main() {
   return (
     <>
       <main className="main">
-        <CardPreview />
+        <Card />
         <Form />
       </main>
     </>
@@ -14,3 +14,6 @@ function Main() {
 }
 
 export default Main;
+
+// He sustituído <CardPreview /> por <Card />
+// porque si no, no aparecía el botón de Reset.
