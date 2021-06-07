@@ -19,52 +19,34 @@ function Design() {
       <div className="colors_design">
         <h3 className="colorstitle">Colores</h3>
         <div className="palette">
-          <ul className="optionColor">
-            <Palette value="1" className="js-CHeckColor1" id="palets"></Palette>
-            <li className="opt1-1"></li>
-            <li className="opt1-2"></li>
-            <li className="opt1-3"></li>
-          </ul>
+          <Palette
+            value="1"
+            className="js-CHeckColor1"
+            id="palets"
+            palette1="opt1-1"
+            palette2="opt1-3"
+            palette3="opt1-2"
+          ></Palette>
+          <Palette
+            value="2"
+            className="js-CHeckColor2"
+            id="palets1"
+            palette1="opt2-1"
+            palette2="opt2-2"
+            palette3="opt2-3"
+          ></Palette>
+          <Palette
+            value="3"
+            className="js-CHeckColor3"
+            id="palets2"
+            palette1="opt3-1"
+            palette2="opt3-2"
+            palette3="opt3-3"
+          ></Palette>
 
           {/* Aquí llamaríamos 3 veces a Palette con sus props
         para cada una de las opciones de palette.
         Después habría que borrar las 2 ul de abajo ("opt2color" y "opt3color").  */}
-          <ul className="opt1color">
-            <label for="palets">
-              <input
-                value="1"
-                className="choosecolor js-CHeckColor1"
-                id="palets"
-              />
-            </label>
-            <li className="opt1-1"></li>
-            <li className="opt1-2"></li>
-            <li className="opt1-3"></li>
-          </ul>
-          <ul className="opt2color">
-            <label for="palets1">
-              <input
-                value="2"
-                className="choosecolor js-CHeckColor2"
-                id="palets1"
-              />
-            </label>
-            <li className="opt2-1"></li>
-            <li className="opt2-2"></li>
-            <li className="opt2-3"></li>
-          </ul>
-          <ul className="opt3color">
-            <label for="palets2">
-              <input
-                value="3"
-                className="choosecolor js-CHeckColor3"
-                id="palets2"
-              />
-            </label>
-            <li className="opt3-1"></li>
-            <li className="opt3-2"></li>
-            <li className="opt3-3"></li>
-          </ul>
         </div>
       </div>
     </fieldset>
