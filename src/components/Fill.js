@@ -1,14 +1,16 @@
+import Collapsable from "./Collapsables";
 import Input from "./Input";
 
 function Fill() {
   return (
     <fieldset className="details">
-      <div className="details__line">
+      {/* <div className="details__line">
         <legend className="details__title">
           <i className="far fa-keyboard details__keyboard"></i> RELLENA
         </legend>
         <i className="fas fa-chevron-up details-up"></i>
-      </div>
+      </div> */}
+      {/* <Collapsable text={"RELLENA"} /> */}
 
       <div className="details__form">
         <Input

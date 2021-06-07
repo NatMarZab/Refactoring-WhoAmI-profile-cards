@@ -1,12 +1,15 @@
+import Collapsable from "./Collapsables";
+
 function Share() {
   return (
     <fieldset className="share js-share">
-      <div className="share__line">
+      {/* <div className="share__line">
         <legend className="share__title">
           <i className="fas fa-share-alt share--send"></i> COMPARTE
         </legend>
         <i className="fas fa-chevron-up share-up"></i>
-      </div>
+      </div> */}
+      <Collapsable text={"COMPARTE"} />
       <nav className="share__create-button js-containerShare">
         <a
           href=""

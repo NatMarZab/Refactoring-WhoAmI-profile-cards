@@ -5,7 +5,7 @@ import Palette from "./Palette";
 function Design() {
   return (
     <fieldset className="colors">
-      <div className="colors__line">
+      {/* <div className="colors__line">
         <legend className="colors__title">
           <i
             className="far fa-object-ungroup boxy js-colorea"
@@ -14,7 +14,7 @@ function Design() {
           DISEÑA
         </legend>
         <i className="fas fa-chevron-up colors-up"></i>
-      </div>
+      </div> */}
 
       <div className="colors_design">
         <h3 className="colorstitle">Colores</h3>
