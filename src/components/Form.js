@@ -14,7 +14,7 @@ function Form() {
         <Fill />
       </Collapsable>
       <Collapsable>
-        <Share />
+        <Share showButtons />
       </Collapsable>
     </form>
   );
