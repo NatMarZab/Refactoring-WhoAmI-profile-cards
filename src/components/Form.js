@@ -11,7 +11,7 @@ function Form() {
         <Design />
       </Collapsable>
       <Collapsable icon={`far fa-keyboard boxy js-colorea`}>
-        <Fill />
+        <Fill image={props.image} updateAvatar={props.updateAvatar} />
       </Collapsable>
       <Collapsable icon={`far fa-address-card boxy js-colorea`}>
         <Share showButtons />

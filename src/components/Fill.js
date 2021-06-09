@@ -1,5 +1,7 @@
 import Collapsable from "./Collapsables";
 import Input from "./Input";
+import GetAvatar from "./GetAvatar";
+import image from "../images/defaultAvatar.png";
 
 function Fill() {
   return (
@@ -32,7 +34,9 @@ function Fill() {
           Imagen de perfil *
         </label>
 
-        <div className="action">
+        <GetAvatar image={props.image} updateAvatar={props.updateAvatar} />
+
+        {/* <div className="action">
           <label className="details__photo-button" htmlFor="img-selector">
             Añadir imagen
           </label>
@@ -43,13 +47,11 @@ function Fill() {
             className="action__hiddenField js__profile-upload-btn"
           />
 
-          {/* //HASTA AQUÍ FUNCIONA */}
-
           <div
             className="profile__image js__profile-image details__photo-preview"
             style={{ backgroundImage: "" }}
           ></div>
-        </div>
+        </div> */}
 
         <Input
           text="Email *"
