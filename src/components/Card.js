@@ -1,8 +1,6 @@
 import React from "react";
-
-// import "../stylesheet/layout/_maincontent1.scss";
-import CardPreview from "./CardPreview";
 import ResetBtn from "./ResetBtn";
+import CardPreview from "./CardPreview";
 
 
 function Card() {

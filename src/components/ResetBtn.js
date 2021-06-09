@@ -1,6 +1,4 @@
 import React from "react";
-// import "../stylesheet/core/_variables.scss";
-// import "../stylesheet/layout/_maincontent1.scss";
 
 function ResetBtn(props) {
     return (

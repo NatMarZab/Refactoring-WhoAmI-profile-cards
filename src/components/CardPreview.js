@@ -2,6 +2,7 @@ import React from "react";
 
 function CardPreview() {
   return (
+    <>
         <div className="maincontainer1__profilecard">
           <div className="maincontainer1__text js-headerpreview">
             {/* {props.name || "Nombre apellido"} */}
@@ -25,6 +26,7 @@ function CardPreview() {
         </a>
         </nav>
         </div>
+    </>
   );
 }
 

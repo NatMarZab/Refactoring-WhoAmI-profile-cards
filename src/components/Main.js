@@ -1,12 +1,11 @@
-// import "../stylesheet/App.scss";
-import CardPreview from "./CardPreview.js";
 import Form from "./Form.js";
+import Card from "./Card";
 
 function Main() {
   return (
     <>
       <main className="main">
-        <CardPreview />
+        <Card />
         <Form />
       </main>
     </>
