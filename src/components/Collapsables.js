@@ -24,17 +24,16 @@ class Collapsable extends React.Component {
       /*const arrowUpDown = this.state.isOpen ? */
     }
     return (
-      <div className={`opencolapsable ${openClassName}`}>
+      <div className="opencolapsable">
         <div className="colors__line" onClick={this.handleCollapsable}>
           <legend className="colors__title">
             <i
-              className="far fa-object-ungroup boxy js-colorea" {/*pasar por props
-              */}
+              className={this.props.icon}
               aria-hidden="true"
             ></i>
             {this.props.text}
           </legend>
-          <i className="fas fa-chevron-up colors-up"></i>
+          <i className={`fas fa-chevron-down colors-up ${openClassName}`}></i>
         </div>
         <div className="form__content">
           {this.state.isOpen ? this.props.children : ""}

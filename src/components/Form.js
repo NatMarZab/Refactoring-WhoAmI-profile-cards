@@ -7,13 +7,13 @@ import Collapsable from "./Collapsables";
 function Form() {
   return (
     <form className="form js-form" action="#" id="resetform">
-      <Collapsable>
+      <Collapsable icon={`far fa-object-ungroup boxy js-colorea`}>
         <Design />
       </Collapsable>
-      <Collapsable>
+      <Collapsable icon={`far fa-keyboard boxy js-colorea`}>
         <Fill />
       </Collapsable>
-      <Collapsable>
+      <Collapsable icon={`far fa-address-card boxy js-colorea`}>
         <Share showButtons />
       </Collapsable>
     </form>

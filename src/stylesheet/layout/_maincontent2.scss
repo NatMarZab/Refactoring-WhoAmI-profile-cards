@@ -342,11 +342,7 @@ fieldset {
   color: $color-white;
 }
 
-.collapseShare {
-  display: none;
-}
-
-.arrowShare {
+.open {
   transform: rotate(180deg);
 }
 .preview__card {
