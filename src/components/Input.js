@@ -11,6 +11,8 @@ function Input(props) {
         name={props.name}
         title={props.title}
         placeholder={props.placeholder}
+        value={props.value}
+        onChange={props.onChange}
       />
     </>
   );

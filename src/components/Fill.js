@@ -3,14 +3,23 @@ import Input from "./Input";
 import GetAvatar from "./GetAvatar";
 import image from "../images/defaultAvatar.png";
 
-function Fill(props) {
-  const handleInputName = (ev) => {
-    props.handleInputName(ev.currentTarget.value);
-  };
-
-  const handleInputJob = (ev) => {
-    props.handleInputJob(ev.currentTarget.value);
-  };
+function Fill({
+  name, 
+  onChangeName, 
+  job, 
+  onChangeJob, 
+  image,
+  updateAvatar,
+  email, 
+  onChangeEmail, 
+  phone, 
+  onChangePhone, 
+  linkedin, 
+  onChangeLinkedin, 
+  github, 
+  onChangeGithub
+}) {
+  
 
   return (
     <fieldset className="details">
@@ -21,8 +30,8 @@ function Fill(props) {
           name="fullName"
           title="fullName"
           placeholder="Ej: Sally Hill"
-          value={props.name}
-          onChange={handleInputName}
+          value={name}
+          onChange={onChangeName}
         />
         <Input
           text="Puesto *"
@@ -30,15 +39,15 @@ function Fill(props) {
           name="workTitle"
           title="workTitle"
           placeholder="Ej: Front-end unicorn"
-          value={props.job}
-          onChange={handleInputJob}
+          value={job}
+          onChange={onChangeJob}
         />
 
         <label className="details__label" htmlFor="photo">
           Imagen de perfil *
         </label>
 
-        <GetAvatar image={props.image} updateAvatar={props.updateAvatar} />
+        <GetAvatar image={image} updateAvatar={updateAvatar} />
 
         <Input
           text="Email *"
@@ -46,6 +55,8 @@ function Fill(props) {
           name="email"
           title="email"
           placeholder="Ej: Sally-hill@gmail.com"
+          value={email}
+          onChange={onChangeEmail}
         />
         <Input
           text="Teléfono"
@@ -53,6 +64,8 @@ function Fill(props) {
           name="phone"
           title="phone"
           placeholder="Ej: 555-55-55-55"
+          value={phone}
+          onChange={onChangePhone}
         />
         <Input
           text="LinkedIn *"
@@ -60,6 +73,8 @@ function Fill(props) {
           name="linkedin"
           title="linkedin"
           placeholder="Ej: linkedin.com/in/sally.hill"
+          value={linkedin}
+          onChange={onChangeLinkedin}
         />
         <Input
           text="Github *"
@@ -67,6 +82,8 @@ function Fill(props) {
           name="github"
           title="github"
           placeholder="Ej: @sally-hill"
+          value={github}
+          onChange={onChangeGithub}
         />
       </div>
     </fieldset>

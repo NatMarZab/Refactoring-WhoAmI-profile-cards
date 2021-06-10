@@ -4,7 +4,7 @@ import Share from "./Share.js";
 import Collapsable from "./Collapsables";
 // // Aquí importaríamos los Collapsables
 
-function Form(props) {
+function Form() {
   return (
     <form className="form js-form" action="#" id="resetform">
       <Collapsable
@@ -15,10 +15,10 @@ function Form(props) {
       </Collapsable>
       <Collapsable icon={`far fa-keyboard boxy js-colorea`} text={" RELLENA"}>
         <Fill
-          name={props.name}
-          job={props.job}
-          image={props.image}
-          updateAvatar={props.updateAvatar}
+          // name={props.name}
+          // job={props.job}
+          // image={props.image}
+          // updateAvatar={props.updateAvatar}
         />
       </Collapsable>
       <Collapsable

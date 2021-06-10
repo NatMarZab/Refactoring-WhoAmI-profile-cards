@@ -15,15 +15,37 @@ function Main() {
     setImage(image);
   };
 
-  const handleInputName = (value) => {
-    setName(value);
-  };
+  // const handleInputName = (value) => {
+  //   setName(value);
+  // };
+
+  // const handleInputName = (ev) => {
+  //   props.handleInputName(ev.currentTarget.value);
+  // };
+
+  // const handleInputJob = (ev) => {
+  //   props.handleInputJob(ev.currentTarget.value);
+  // };
 
   return (
     <>
       <main className="main">
         <Card image={image} />
-        <Form image={image} updateAvatar={updateAvatar} />
+        <Form 
+        name={name}
+        onChangeName={(ev)=>setName(ev.currentTarget.value)}
+        job={job}
+        onChangeJob={(ev)=>setJob(ev.currentTarget.value)}
+        image={image} updateAvatar={updateAvatar}
+        email={email}
+        onChangeEmail={(ev)=>setEmail(ev.currentTarget.value)}
+        phone={phone}
+        onChangePhone={(ev)=>setPhone(ev.currentTarget.value)}
+        linkedin={linkedin}
+        onChangeLinkedin={(ev)=>setLinkedin(ev.currentTarget.value)}
+        github={github}
+        onChangeGithub={(ev)=>setGithub(ev.currentTarget.value)}
+        />
       </main>
     </>
   );
