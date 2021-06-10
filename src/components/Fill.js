@@ -3,17 +3,17 @@ import Input from "./Input";
 import GetAvatar from "./GetAvatar";
 import image from "../images/defaultAvatar.png";
 
-function Fill() {
+function Fill(props) {
+  const handleInputName = (ev) => {
+    props.handleInputName(ev.currentTarget.value);
+  };
+
+  const handleInputJob = (ev) => {
+    props.handleInputJob(ev.currentTarget.value);
+  };
+
   return (
     <fieldset className="details">
-      {/* <div className="details__line">
-        <legend className="details__title">
-          <i className="far fa-keyboard details__keyboard"></i> RELLENA
-        </legend>
-        <i className="fas fa-chevron-up details-up"></i>
-      </div> */}
-      {/* <Collapsable text={"RELLENA"} /> */}
-
       <div className="details__form">
         <Input
           text="Nombre completo *"
@@ -21,6 +21,8 @@ function Fill() {
           name="fullName"
           title="fullName"
           placeholder="Ej: Sally Hill"
+          value={props.name}
+          onChange={handleInputName}
         />
         <Input
           text="Puesto *"
@@ -28,6 +30,8 @@ function Fill() {
           name="workTitle"
           title="workTitle"
           placeholder="Ej: Front-end unicorn"
+          value={props.job}
+          onChange={handleInputJob}
         />
 
         <label className="details__label" htmlFor="photo">
@@ -35,23 +39,6 @@ function Fill() {
         </label>
 
         <GetAvatar image={props.image} updateAvatar={props.updateAvatar} />
-
-        {/* <div className="action">
-          <label className="details__photo-button" htmlFor="img-selector">
-            Añadir imagen
-          </label>
-          <input
-            type="file"
-            name="photo"
-            id="img-selector"
-            className="action__hiddenField js__profile-upload-btn"
-          />
-
-          <div
-            className="profile__image js__profile-image details__photo-preview"
-            style={{ backgroundImage: "" }}
-          ></div>
-        </div> */}
 
         <Input
           text="Email *"

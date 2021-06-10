@@ -7,10 +7,9 @@ import Footer from "./Footer";
 //import React, { Component } from "react";
 
 class App extends React.Component {
-  //constructor(props) {
-  //duda: ¿hay que dejarlo definido? ¿Lo vamos a usar inmediatamente? ¿Se puede quitar?
-  //super(props);
-  //}
+  constructor(props) {
+    super(props);
+  }
 
   render() {
     //Aquí se declaran las constantes(escribimos el valor entre paréntesis)

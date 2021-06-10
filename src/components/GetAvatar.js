@@ -74,7 +74,7 @@ class GetAvatar extends React.Component {
           <input
             type="file"
             ref={this.myFileField}
-            className="get-avatar__upload-field"
+            className="action__hiddenField js__profile-upload-btn"
             onChange={this.uploadImage}
           />
         </label>
@@ -87,6 +87,13 @@ class GetAvatar extends React.Component {
     );
   }
 }
+
+<input
+  type="file"
+  name="photo"
+  id="img-selector"
+  class="action__hiddenField js__profile-upload-btn"
+/>;
 
 GetAvatar.propTypes = {
   avatar: PropTypes.string.isRequired,
