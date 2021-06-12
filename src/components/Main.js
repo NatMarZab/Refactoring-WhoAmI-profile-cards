@@ -3,6 +3,7 @@ import Form from "./Form.js";
 import Card from "./Card.js";
 
 function Main() {
+  const [palette, setPalette] = useState("1");
   const [name, setName] = useState("");
   const [job, setJob] = useState("");
   const [image, setImage] = useState("");
@@ -31,20 +32,23 @@ function Main() {
     <>
       <main className="main">
         <Card image={image} />
-        <Form 
-        name={name}
-        onChangeName={(ev)=>setName(ev.currentTarget.value)}
-        job={job}
-        onChangeJob={(ev)=>setJob(ev.currentTarget.value)}
-        image={image} updateAvatar={updateAvatar}
-        email={email}
-        onChangeEmail={(ev)=>setEmail(ev.currentTarget.value)}
-        phone={phone}
-        onChangePhone={(ev)=>setPhone(ev.currentTarget.value)}
-        linkedin={linkedin}
-        onChangeLinkedin={(ev)=>setLinkedin(ev.currentTarget.value)}
-        github={github}
-        onChangeGithub={(ev)=>setGithub(ev.currentTarget.value)}
+        <Form
+          palette={palette}
+          onChangePalette={(evt) => setPalette(evt.target.value)}
+          name={name}
+          onChangeName={(ev) => setName(ev.currentTarget.value)}
+          job={job}
+          onChangeJob={(ev) => setJob(ev.currentTarget.value)}
+          image={image}
+          updateAvatar={updateAvatar}
+          email={email}
+          onChangeEmail={(ev) => setEmail(ev.currentTarget.value)}
+          phone={phone}
+          onChangePhone={(ev) => setPhone(ev.currentTarget.value)}
+          linkedin={linkedin}
+          onChangeLinkedin={(ev) => setLinkedin(ev.currentTarget.value)}
+          github={github}
+          onChangeGithub={(ev) => setGithub(ev.currentTarget.value)}
         />
       </main>
     </>

@@ -1,26 +1,23 @@
-import Collapsable from "./Collapsables";
 import Input from "./Input";
 import GetAvatar from "./GetAvatar";
 import image from "../images/defaultAvatar.png";
 
 function Fill({
-  name, 
-  onChangeName, 
-  job, 
-  onChangeJob, 
+  name,
+  onChangeName,
+  job,
+  onChangeJob,
   image,
   updateAvatar,
-  email, 
-  onChangeEmail, 
-  phone, 
-  onChangePhone, 
-  linkedin, 
-  onChangeLinkedin, 
-  github, 
-  onChangeGithub
+  email,
+  onChangeEmail,
+  phone,
+  onChangePhone,
+  linkedin,
+  onChangeLinkedin,
+  github,
+  onChangeGithub,
 }) {
-  
-
   return (
     <fieldset className="details">
       <div className="details__form">

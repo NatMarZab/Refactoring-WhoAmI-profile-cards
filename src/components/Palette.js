@@ -8,9 +8,11 @@ function Palette(props) {
           <input
             type="radio"
             value={props.value}
-            className={`choosecolor ${props.className}`}
+            className="choosecolor"
             id={props.id}
             name="palette"
+            checked={props.checked}
+            onChange={props.onChange}
           />
         </label>
 
