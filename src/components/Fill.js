@@ -1,26 +1,23 @@
-import Collapsable from "./Collapsables";
 import Input from "./Input";
 import GetAvatar from "./GetAvatar";
 import image from "../images/defaultAvatar.png";
 
 function Fill({
-  name, 
-  onChangeName, 
-  job, 
-  onChangeJob, 
+  name,
+  onChangeName,
+  job,
+  onChangeJob,
   image,
   updateAvatar,
-  email, 
-  onChangeEmail, 
-  phone, 
-  onChangePhone, 
-  linkedin, 
-  onChangeLinkedin, 
-  github, 
-  onChangeGithub
+  email,
+  onChangeEmail,
+  phone,
+  onChangePhone,
+  linkedin,
+  onChangeLinkedin,
+  github,
+  onChangeGithub,
 }) {
-  
-
   return (
     <fieldset className="details">
       <div className="details__form">
@@ -48,6 +45,12 @@ function Fill({
         </label>
 
         <GetAvatar image={image} updateAvatar={updateAvatar} />
+        {/* <div
+          class="profile__image js__profile-image details__photo-preview"
+          style="
+            background-image: url(https://www.w3schools.com/howto/img_avatar2.png);
+          "
+        ></div> */}
 
         <Input
           text="Email *"

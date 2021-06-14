@@ -1,27 +1,18 @@
-import React from "react";
 import "../stylesheet/App.scss";
-import Header from "./Header";
-import Main from "./Main";
-import Footer from "./Footer";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import Landing from "./Landing";
+import PageTwo from "./PageTwo";
 
-//import React, { Component } from "react";
-
-class App extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-
-  render() {
-    //Aquí se declaran las constantes(escribimos el valor entre paréntesis)
-    return (
-      <>
-        <Header />
-        <Main />
-        <Footer />
-      </>
-    );
-    // Esto es lo que va a pintar
-  }
+function App() {
+  return (
+    <Router>
+      <Switch>
+        <Route path="/" exact children={<Landing />} />
+        <Route path="/pagetwo" exact children={<PageTwo />} />
+        <Route children={<p>Página no encontrada</p>} />
+      </Switch>
+    </Router>
+  );
 }
 
 export default App;
