@@ -1,4 +1,6 @@
 import React from "react";
+import Profile from "./Profile";
+import image from "../images/defaultAvatar.png";
 
 function CardPreview(props) {
   return (
@@ -6,32 +8,39 @@ function CardPreview(props) {
       <div className="maincontainer1__profilecard">
         <div className="maincontainer1__text js-headerpreview">
           <h2 className="maincontainer1__title js-name">
-            {" "}
             {props.name || "Nombre apellido"}
           </h2>
-          {/* {props.job || "Front-end developer"} */}
           <h3 className="maincontainer1__subtitle js-job">
-            Front-end developer
+            {props.job || "Front-end developer"}
           </h3>
         </div>
-        <div className="maincontainer1__img js__profile-preview js__border-palette"></div>
+        <div className="maincontainer1__img js__profile-preview js__border-palette" style={{ backgroundImage: `url(${image})` }}>
+          
+        </div>
+
         <nav className="maincontainer1__links-container js-footerpreview">
           <a
-            href=""
+            href={`tel:${props.phone}`}
             className="maincontainer1__links js-telefono js__link__radius"
           >
             <i className="fas fa-mobile-alt js__link__pallete"></i>
           </a>
-          <a href="" className="maincontainer1__links js-mail js__link__radius">
+          <a
+            href={`mailto:${props.email}`}
+            className="maincontainer1__links js-mail js__link__radius"
+          >
             <i className="far fa-envelope js__link__pallete"></i>
           </a>
           <a
-            href=""
+            href={`https://www.linkedin.com/in/${props.linkedin}`}
             className="maincontainer1__links js-linkedin js__link__radius"
           >
             <i className="fab fa-linkedin-in js__link__pallete"></i>
           </a>
-          <a href="" className="maincontainer1__links js-git js__link__radius">
+          <a
+            href={`https://github.com/${props.github}`}
+            className="maincontainer1__links js-git js__link__radius"
+          >
             <i className="fab fa-github-alt js__link__pallete"></i>
           </a>
         </nav>

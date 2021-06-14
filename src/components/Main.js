@@ -31,7 +31,15 @@ function Main() {
   return (
     <>
       <main className="main">
-        <Card image={image} name={name} />
+        <Card
+          name={name}
+          job={job}
+          image={image}
+          email={email}
+          phone={phone}
+          linkedin={linkedin}
+          github={github}
+        />
         <Form
           palette={palette}
           onChangePalette={(evt) => setPalette(evt.target.value)}

@@ -45,6 +45,12 @@ function Fill({
         </label>
 
         <GetAvatar image={image} updateAvatar={updateAvatar} />
+        {/* <div
+          class="profile__image js__profile-image details__photo-preview"
+          style="
+            background-image: url(https://www.w3schools.com/howto/img_avatar2.png);
+          "
+        ></div> */}
 
         <Input
           text="Email *"
