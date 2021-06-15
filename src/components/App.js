@@ -5,14 +5,11 @@ import PageTwo from "./PageTwo";
 
 function App() {
   return (
-
-      <Router>
-      <Switch>
-        <Route path="/" exact component={Landing} />
-        <Route path="/pagetwo" exact component={PageTwo} />
-        <Route> {<p>Página no encontrada</p>}</Route>
-      </Switch>
-    </Router>
+    <Switch>
+      <Route path="/" exact component={Landing} />
+      <Route path="/pagetwo" exact component={PageTwo} />
+      <Route> {<p>Página no encontrada</p>}</Route>
+    </Switch>
   );
 }
 
