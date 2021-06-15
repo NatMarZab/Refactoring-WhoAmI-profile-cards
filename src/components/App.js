@@ -17,6 +17,7 @@ function App() {
         <Route exact path="/pagetwo">
           <PageTwo />
         </Route>
+        <Route children={<p>Página no encontrada</p>} />
       </Switch>
     </Router>
     // <Router>
