@@ -1,0 +1,138 @@
+.main {
+  background-color: $background-main;
+}
+
+.maincontainer1 {
+  background: linear-gradient(to bottom, #bfcdd0, #dde9ed);
+  height: 457px;
+
+  &__button {
+    background: none;
+    border: 1px solid white;
+    border-radius: 22.5px;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
+    width: 75px;
+    height: 30px;
+    text-transform: uppercase;
+    padding: 2px 2px;
+    font-family: $font-main;
+    color: $color-base;
+    font-size: 12px;
+    margin-left: calc(50% - 120px);
+    margin-top: 38px;
+    margin-bottom: 23px;
+  }
+  .fa-trash-alt {
+    color: $color-base;
+  }
+
+  &__profilecard {
+    border: 1px $color-base solid;
+    margin-left: calc(50% - 120px);
+    margin-right: calc(50% - 120px);
+    padding-top: 21px;
+    height: 329px;
+    background-color: $color-white;
+    box-shadow: 0 1px 10px 0 black, 0 1px 3px 0 rgba(0, 0, 0, 0.35);
+  }
+  &__text {
+    width: 240px;
+    border-left: 5px #438792 solid;
+    padding-left: 20px;
+  }
+  &__title {
+    font-family: $font-montse;
+    color: $color-green;
+    font-weight: bold;
+    font-size: 18px;
+    text-transform: capitalize;
+  }
+  &__subtitle {
+    font-family: $font-montse;
+    font-weight: lighter;
+    font-size: 16px;
+    color: $color-base;
+  }
+  &__img {
+    height: 200px;
+    width: 238px;
+    margin-top: 10px;
+    background-image: url(https://www.w3schools.com/howto/img_avatar2.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  &__links-container {
+    padding-left: 20px;
+    padding-top: 10px;
+    padding-bottom: 17px;
+
+    display: flex;
+    justify-content: flex-start;
+  }
+  &__links {
+    border: solid 2px $color-hospitalgreen;
+    border-radius: 16px;
+    width: 32px;
+    height: 32px;
+    margin: 0 10px 0 0;
+    padding: 7px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: $color-green;
+  }
+}
+@media (min-width: 720px) {
+  .main {
+    display: grid;
+    grid-template-columns: 1fr, 1fr;
+    grid-template-rows: 1fr;
+  }
+  .maincontainer1 {
+    grid-column: 2/3;
+    grid-row: 1/2;
+    height: 826px;
+    border-radius: 6px;
+    margin-right: 40px;
+    margin-top: 40px;
+    &__button {
+      margin-top: 180px;
+    }
+  }
+  .form {
+    grid-column: 1/2;
+    grid-row: 1/2;
+  }
+}
+//Paleta 2
+.border-preview2 {
+  border-left: 5px $color2-2 solid;
+}
+.h1-color2 {
+  color: $color2-1;
+}
+.links2 {
+  color: $color2-2;
+}
+.links2_1 {
+  border: solid 2px $color2-3;
+  border-radius: 16px;
+}
+//Paleta 3
+.border-preview3 {
+  border-left: 5px $color3-2 solid;
+}
+.h1-color3 {
+  color: $color3-1;
+}
+.links3 {
+  color: $color3-2;
+}
+.links3_1 {
+  border: solid 2px $color3-3;
+  border-radius: 16px;
+}

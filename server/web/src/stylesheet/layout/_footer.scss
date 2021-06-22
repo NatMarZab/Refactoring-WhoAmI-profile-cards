@@ -1,0 +1,26 @@
+.logo-adalab {
+  width: 103px;
+  height: 40px;
+  margin-bottom: 20px;
+  margin-top: 12px;
+}
+
+.footer {
+  font-family: $font-main;
+  font-size: $normalsize;
+  color: $color-copy;
+  height: 20vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-top: solid 1px $color-copy;
+
+  @media all and (min-width: 768px) {
+    flex-direction: row;
+    justify-content: space-between;
+    margin-right: 40px;
+    margin-left: 41px;
+    height: 6vh;
+  }
+}
