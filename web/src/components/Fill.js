@@ -1,6 +1,7 @@
 import Input from "./Input";
 import GetAvatar from "./GetAvatar";
-import image from "../images/defaultAvatar.png";
+import defaultAvatar from "../images/defaultAvatar.png";
+//import image from "../images/defaultAvatar.png";
 
 function Fill({
   name,
@@ -44,13 +45,21 @@ function Fill({
           Imagen de perfil *
         </label>
 
-        <GetAvatar image={image} updateAvatar={updateAvatar} />
+        <GetAvatar avatar={image} updateAvatar={updateAvatar} />
         <div
           class="profile__image js__profile-image details__photo-preview"
           // style="
           //   background-image: url(https://www.w3schools.com/howto/img_avatar2.png);
           // "
-        ></div>
+        >
+          <input
+            type="file"
+            name="image"
+            id="img-selector"
+            className="action__hiddenField js__profile-upload-btn"
+            required
+          />
+        </div>
 
         <Input
           text="Email *"

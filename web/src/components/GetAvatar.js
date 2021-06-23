@@ -70,7 +70,7 @@ class GetAvatar extends React.Component {
     return (
       <div className="get-avatar">
         <label className="details__photo-button" type="button">
-          Get avatar!
+          AÑADIR IMAGEN
           <input
             type="file"
             ref={this.myFileField}

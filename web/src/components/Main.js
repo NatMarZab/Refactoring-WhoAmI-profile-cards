@@ -35,6 +35,7 @@ function Main() {
           name={name}
           job={job}
           image={image}
+          updateAvatar={updateAvatar}
           email={email}
           phone={phone}
           linkedin={linkedin}
@@ -48,7 +49,7 @@ function Main() {
           job={job}
           onChangeJob={(ev) => setJob(ev.currentTarget.value)}
           image={image}
-          updateAvatar={updateAvatar}
+          updateAvatar={updateAvatar} 
           email={email}
           onChangeEmail={(ev) => setEmail(ev.currentTarget.value)}
           phone={phone}
