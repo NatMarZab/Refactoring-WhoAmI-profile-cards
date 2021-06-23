@@ -1,7 +1,7 @@
 const express = require ('express');
 const cors = require('cors');
 
-const server = express();
+const server = express(); //cambio tonto
 
 //configurar servidor
 server.use( cors() );
