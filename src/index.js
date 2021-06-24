@@ -15,15 +15,19 @@ server.listen( serverPort, () => { console.log(`Server listening at http://local
 
 
 // modelo para hacer nuestro GET y POST cuando tengamos el fetch.
-server.get('/users', (req, res) => {
+server.get('/card', (req, res) => {
     const response = {
       users: [{ name: 'Sofía' }, { name: 'María' }]
     };
+
+    // PARAM URL
+    // SERVIDOR DE DINAMICOS
+
     res.json(response);
   });
   
   // API request > POST > http://localhost:3002/new-user
-  server.post('/new-user', (req, res) => {
+  server.post('/card', (req, res) => {
     // console request body params
     console.log(`Creating the user in database with user name: "${req.body.userName}"`);
     const response = {
