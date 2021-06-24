@@ -46,7 +46,7 @@ function Fill({
         </label>
 
         <GetAvatar avatar={image} updateAvatar={updateAvatar} />
-        <div
+        {/*<div
           class="profile__image js__profile-image details__photo-preview"
           // style="
           //   background-image: url(https://www.w3schools.com/howto/img_avatar2.png);
@@ -59,7 +59,9 @@ function Fill({
             className="action__hiddenField js__profile-upload-btn"
             required
           />
-        </div>
+        
+        </div>*/}
+
 
         <Input
           text="Email *"

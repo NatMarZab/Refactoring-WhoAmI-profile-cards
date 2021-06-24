@@ -14,7 +14,7 @@ function CardPreview(props) {
             {props.job || "Front-end developer"}
           </h3>
         </div>
-        <div className="maincontainer1__img js__profile-preview js__border-palette" style={{ backgroundImage: `url(${props.image})` }}>
+        <div className="maincontainer1__img js__profile-preview js__border-palette" style={{ backgroundImage: `url(${props.image ? props.image : image})` }}>
           
         </div>
 

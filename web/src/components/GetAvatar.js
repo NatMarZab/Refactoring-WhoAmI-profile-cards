@@ -80,7 +80,7 @@ class GetAvatar extends React.Component {
         </label>
 
         <div
-          className="get-avatar__preview"
+          className="get-avatar__preview profile__image js__profile-image details__photo-preview"
           style={{ backgroundImage: `url(${avatar})` }}
         ></div>
       </div>
