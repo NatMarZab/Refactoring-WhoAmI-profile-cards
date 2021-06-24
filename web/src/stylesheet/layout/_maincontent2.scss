@@ -19,6 +19,7 @@ fieldset {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding-right: 20px;
 }
 
 .colors__title {
@@ -192,6 +193,7 @@ fieldset {
   border: solid 1px $color-hospitalgreen;
   height: 30px;
   margin-bottom: 20px;
+  padding: 10px;
 }
 
 .details__photo {

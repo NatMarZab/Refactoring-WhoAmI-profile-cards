@@ -39,10 +39,11 @@ function Main() {
           phone={phone}
           linkedin={linkedin}
           github={github}
+          palette={palette}
         />
         <Form
           palette={palette}
-          onChangePalette={(evt) => setPalette(evt.target.value)}
+          onChangePalette={(ev) => setPalette(ev.target.value)}
           name={name}
           onChangeName={(ev) => setName(ev.currentTarget.value)}
           job={job}
