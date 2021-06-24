@@ -7,6 +7,8 @@ const server = express(); //cambio tonto
 server.use( cors() );
 server.use( express.json() );
 
+server.use( express.static("./public" ) );
+
 //arrancar servidor
 const serverPort= 3002;
 server.listen( serverPort, () => { console.log(`Server listening at http://localhost:${serverPort}`);});

@@ -20,7 +20,9 @@ function CardPreview(props) {
         </div>
         <div
           className="maincontainer1__img js__profile-preview js__border-palette"
-          style={{ backgroundImage: `url(${image})` }}
+          style={{
+            backgroundImage: `url(${props.image ? props.image : image})`,
+          }}
         ></div>
 
         <nav className="maincontainer1__links-container js-footerpreview">
