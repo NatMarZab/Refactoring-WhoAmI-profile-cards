@@ -68,7 +68,7 @@ function Fill({
           id="email"
           name="email"
           title="email"
-          placeholder="Ej: Sally-hill@gmail.com"
+          placeholder="Ej: sally-hill@gmail.com"
           value={email}
           onChange={onChangeEmail}
         />
@@ -86,7 +86,7 @@ function Fill({
           id="linkedin"
           name="linkedin"
           title="linkedin"
-          placeholder="Ej: linkedin.com/in/sally.hill"
+          placeholder="Ej: sally.hill"
           value={linkedin}
           onChange={onChangeLinkedin}
         />
