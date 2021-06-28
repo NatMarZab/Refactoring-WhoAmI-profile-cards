@@ -1,20 +1,22 @@
-const express = require ('express');
-const cors = require('cors');
+const express = require("express");
+const cors = require("cors");
 
 const server = express();
 
 //configurar servidor
-server.use( cors() );
-server.use( express.json() );
+server.use(cors());
+server.use(express.json());
 server.use(express.json({ limit: "10mb" }));
-server.use( express.static("./public" ) );
+server.use(express.static("./public"));
 
 // set template engine middlewares
-server.set('view engine', 'ejs');
+server.set("view engine", "ejs");
 
 //arrancar servidor
-const serverPort= process.env.PORT || 3002;
-server.listen( serverPort, () => { console.log(`Server listening at http://localhost:${serverPort}`);});
+const serverPort = process.env.PORT || 3002;
+server.listen(serverPort, () => {
+  console.log(`Server listening at http://localhost:${serverPort}`);
+});
 
 // static server
 const serverStaticPath = "./public";
@@ -22,13 +24,13 @@ server.use(express.static(serverStaticPath));
 
 //database
 const Database = require("better-sqlite3");
-const db = new Database("./src/database/awesome_db.db" , {
+const db = new Database("./src/database/awesome_db.db", {
   verbose: console.log,
 });
 
 // endpoints
 
-server.get('/card/:id', (req, res) => {
+server.get("/card/:id", (req, res) => {
   // get card data
   const query = db.prepare(`SELECT * FROM users WHERE id = ?`);
   const cardData = query.get(req.params.id);
@@ -37,24 +39,23 @@ server.get('/card/:id', (req, res) => {
   res.render("views/card", cardData);
 });
 
-  server.post("/card/", (req, res) => {
-    const query = db.prepare(
-      `SELECT * FROM users WHERE palette= ? AND name = ? AND job = ? AND photo = ? AND email = ? AND phone = ? AND linkedin = ? AND github = ?`
-    );  
+server.post("/card/", (req, res) => {
+  const query = db.prepare(
+    `SELECT * FROM users WHERE palette= ? AND name = ? AND job = ? AND photo = ? AND email = ? AND phone = ? AND linkedin = ? AND github = ?`
+  );
 
-    const foundUser = query.get (
-      req.body.palette,
-      req.body.name,
-      req.body.job,
-      req.body.photo,
-      req.body.email,
-      req.body.phone,
-      req.body.linkedin,
-      req.body.github
-    );
+  const foundUser = query.get(
+    req.body.palette,
+    req.body.name,
+    req.body.job,
+    req.body.photo,
+    req.body.email,
+    req.body.phone,
+    req.body.linkedin,
+    req.body.github
+  );
 
-
-    let responseError = "";
+  let responseError = "";
   console.log(foundUser);
 
   if (isNaN(parseInt(foundUser.palette))) {
@@ -82,6 +83,19 @@ server.get('/card/:id', (req, res) => {
     response.success = false;
     responseError = "Missing github";
   } else {
+    const query = db.prepare(
+      `INSERT INTO users (palette, name, job, photo, email, phone, linkedin, github) VALUES (?, ?, ?, ?, ?, ?, ?, ?)`
+    );
+    const result = query.run(
+      req.body.palette,
+      req.body.name,
+      req.body.job,
+      req.body.photo,
+      req.body.email,
+      req.body.phone,
+      req.body.linkedin,
+      req.body.github
+    );
     response.success = true;
     response.cardURL =
       "https://awesome-profile-card.herokuapp.com/card/" +
@@ -104,16 +118,15 @@ server.get('/card/:id', (req, res) => {
 //       users: [{ name: 'Sofía' }, { name: 'María' }]
 //     };
 
-    // PARAM URL
-    // SERVIDOR DE DINAMICOS
+// PARAM URL
+// SERVIDOR DE DINAMICOS
 
-  
-  // // API request > POST > http://localhost:3002/new-user
-  // server.post('/card', (req, res) => {
-  //   // console request body params
-  //   console.log(`Creating the user in database with user name: "${req.body.userName}"`);
-  //   const response = {
-  //     result: `User created: ${req.body.userName}`
-  //   };
-  //   res.json(response);
-  // });
+// // API request > POST > http://localhost:3002/new-user
+// server.post('/card', (req, res) => {
+//   // console request body params
+//   console.log(`Creating the user in database with user name: "${req.body.userName}"`);
+//   const response = {
+//     result: `User created: ${req.body.userName}`
+//   };
+//   res.json(response);
+// });
