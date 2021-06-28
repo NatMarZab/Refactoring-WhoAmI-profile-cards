@@ -84,7 +84,7 @@ server.get('/card/:id', (req, res) => {
   } else {
     response.success = true;
     response.cardURL =
-      "https://awesomeprofilecards.herokuapp.com/card/" +
+      "https://awesome-profile-card.herokuapp.com/card/" +
       result.lastInsertRowid;
   }
   res.json({ error: responseError });
