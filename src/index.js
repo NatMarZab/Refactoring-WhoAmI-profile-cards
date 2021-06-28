@@ -10,7 +10,7 @@ server.use( express.json() );
 server.use( express.static("./public" ) );
 
 //arrancar servidor
-const serverPort= process.env.PORT || 3002;
+const serverPort= 3002;
 server.listen( serverPort, () => { console.log(`Server listening at http://localhost:${serverPort}`);});
 
 
