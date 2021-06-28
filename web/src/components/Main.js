@@ -63,6 +63,19 @@ function Main() {
     ls.set("github", github);
   }, [name, job, image, palette, email, phone, linkedin, github]);
 
+  const handleReset = () => {
+    setPalette("1");
+    setName("");
+    setJob("");
+    setImage(defaultAvatar);
+    setEmail("");
+    setPhone("");
+    setLinkedin("");
+    setGithub("");
+    ls.clear();
+    location.reload();
+  }
+
   /* function handleCreateCard(ev) {
     ev.preventDefault();
   }*/
@@ -94,6 +107,7 @@ function Main() {
           linkedin={linkedin}
           github={github}
           palette={palette}
+          handleReset={handleReset}
         />
         <Form
           palette={palette}

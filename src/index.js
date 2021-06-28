@@ -41,7 +41,7 @@ server.get("/card/:id", (req, res) => {
 
 server.post("/card/", (req, res) => {
   const query = db.prepare(
-    `SELECT * FROM users WHERE palette= ? AND name = ? AND job = ? AND photo = ? AND email = ? AND phone = ? AND linkedin = ? AND github = ?`
+    `SELECT * FROM card WHERE palette= ? AND name = ? AND job = ? AND photo = ? AND email = ? AND phone = ? AND linkedin = ? AND github = ?`
   );
 
   const foundUser = query.get(
@@ -60,31 +60,31 @@ server.post("/card/", (req, res) => {
 
   if (isNaN(parseInt(foundUser.palette))) {
     response.success = false;
-    responseError = "Missing palette";
+    responseError = "Elige paleta de colores";
   } else if (foundUser.name === "") {
     response.success = false;
-    responseError = "Missing name";
+    responseError = "Falta el nombre";
   } else if (foundUser.job === "") {
     response.success = false;
-    responseError = "Missing job";
+    responseError = "Falta el puesto";
   } else if (foundUser.photo === "") {
     response.success = false;
-    responseError = "Missing photo";
+    responseError = "Falta la imagen";
   } else if (foundUser.email === "") {
     response.success = false;
-    responseError = "Missing email";
+    responseError = "Falta el email";
   } else if (foundUser.phone === "") {
     response.success = false;
-    responseError = "Missing phone";
+    responseError = "Falta el teléfono";
   } else if (foundUser.linkedin === "") {
     response.success = false;
-    responseError = "Missing linkedin";
+    responseError = "Falta el usuario de linkedin";
   } else if (foundUser.github === "") {
     response.success = false;
-    responseError = "Missing github";
+    responseError = "Falta el usuario de github";
   } else {
     const query = db.prepare(
-      `INSERT INTO users (palette, name, job, photo, email, phone, linkedin, github) VALUES (?, ?, ?, ?, ?, ?, ?, ?)`
+      `INSERT INTO card (palette, name, job, photo, email, phone, linkedin, github) VALUES (?, ?, ?, ?, ?, ?, ?, ?)`
     );
     const result = query.run(
       req.body.palette,
