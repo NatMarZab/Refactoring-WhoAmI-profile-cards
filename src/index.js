@@ -10,7 +10,7 @@ server.use( express.json() );
 server.use( express.static("./public" ) );
 
 //arrancar servidor
-const serverPort= 5000;
+const serverPort= process.env.PORT || 3002;
 server.listen( serverPort, () => { console.log(`Server listening at http://localhost:${serverPort}`);});
 
 
@@ -26,7 +26,7 @@ server.get('/card', (req, res) => {
     res.json(response);
   });
   
-  // API request > POST > http://localhost:5000/new-user
+  // API request > POST > http://localhost:3002/new-user
   server.post('/card', (req, res) => {
     // console request body params
     console.log(`Creating the user in database with user name: "${req.body.userName}"`);
