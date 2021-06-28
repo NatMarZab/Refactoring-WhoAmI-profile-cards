@@ -21,6 +21,10 @@ function Form({
   onChangeLinkedin,
   github,
   onChangeGithub,
+  onCreateCard,
+  showButtons,
+  errorMsg,
+  wholeCard,
 }) {
   return (
     <form className="form js-form" action="#" id="resetform">
@@ -56,7 +60,13 @@ function Form({
         icon={`far fa-address-card boxy js-colorea`}
         text={" COMPARTE"}
       >
-        <Share showButtons />
+        <Share
+          errorMsg={errorMsg}
+          onCreateCard={onCreateCard}
+          showButtons={showButtons}
+          /* errorMsg={errorMsg}*/
+          wholeCard={wholeCard}
+        />
       </Collapsable>
     </form>
   );
