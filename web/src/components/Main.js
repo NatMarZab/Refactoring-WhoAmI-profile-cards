@@ -73,7 +73,6 @@ function Main() {
     setLinkedin("");
     setGithub("");
     ls.clear();
-    location.reload();
   }
 
   /* function handleCreateCard(ev) {
