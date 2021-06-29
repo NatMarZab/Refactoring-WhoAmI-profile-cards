@@ -18,8 +18,8 @@
   <body>
     <section class="maincontainer1">
       <div class="maincontainer1__profilecard" style="transform: translate(0%, 50%);">
-        <div class="maincontainer1__text js-headerpreview border-preview1 <%= palette %>">
-          <h2 class="maincontainer1__title js-name h1-color1"><%= name %></h2>
+        <div class="maincontainer1__text js-headerpreview border-preview<%= palette %>">
+          <h2 class="maincontainer1__title js-name h1-color<%= palette %>"><%= name %></h2>
           <h3 class="maincontainer1__subtitle js-job"><%= job %></h3>
         </div>
         <div
@@ -30,38 +30,38 @@
         <nav class="maincontainer1__links-container js-footerpreview">
           <a
             href="tel:<%= phone %>"
-            class="maincontainer1__links js-telefono js__link__radius links1_1"
+            class="maincontainer1__links js-telefono js__link__radius links<%= palette %>_1"
             target="_blank"
             title="telephone"
             ><i
-              class="fas fa-mobile-alt js__link__pallete links1"
+              class="fas fa-mobile-alt js__link__pallete links<%= palette %>"
               aria-hidden="true"
             ></i></a
           ><a
             href="mailto:<%= email %>"
-            class="maincontainer1__links js-mail js__link__radius links1_1"
+            class="maincontainer1__links js-mail js__link__radius links<%= palette %>_1"
             target="_blank"
             title="email"
             ><i
-              class="far fa-envelope js__link__pallete links1"
+              class="far fa-envelope js__link__pallete links<%= palette %>"
               aria-hidden="true"
             ></i></a
           ><a
             href="https://www.linkedin.com/in/<%= linkedin %>"
-            class="maincontainer1__links js-linkedin js__link__radius links1_1"
+            class="maincontainer1__links js-linkedin js__link__radius links<%= palette %>_1"
             target="_blank"
             title="linkedin"
             ><i
-              class="fab fa-linkedin-in js__link__pallete links1"
+              class="fab fa-linkedin-in js__link__pallete links<%= palette %>"
               aria-hidden="true"
             ></i></a
           ><a
             href="https://github.com/<%= github %>"
-            class="maincontainer1__links js-git js__link__radius links1_1"
+            class="maincontainer1__links js-git js__link__radius links<%= palette %>_1"
             target="_blank"
             title="github"
             ><i
-              class="fab fa-github-alt js__link__pallete links1"
+              class="fab fa-github-alt js__link__pallete links<%= palette %>"
               aria-hidden="true"
             ></i
           ></a>
