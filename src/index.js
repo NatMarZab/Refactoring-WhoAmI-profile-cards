@@ -18,9 +18,6 @@ server.listen(serverPort, () => {
   console.log(`Server listening at http://localhost:${serverPort}`);
 });
 
-// static server
-const serverStaticPath = "./public";
-server.use(express.static(serverStaticPath));
 
 //database
 const Database = require("better-sqlite3");
@@ -31,15 +28,17 @@ const db = new Database("./src/database/awesome_db.db", {
 // endpoints
 
 server.get("/card/:id", (req, res) => {
+  console.log("/card");
   // get card data
-  const query = db.prepare(`SELECT * FROM users WHERE id = ?`);
+  const query = db.prepare(`SELECT * FROM card WHERE id = ?`);
   const cardData = query.get(req.params.id);
   console.log(cardData);
 
-  res.render("views/card", cardData);
+  res.render("card", cardData);
 });
 
 server.post("/card/", (req, res) => {
+  /*
   const query = db.prepare(
     `SELECT * FROM card WHERE palette= ? AND name = ? AND job = ? AND photo = ? AND email = ? AND phone = ? AND linkedin = ? AND github = ?`
   );
@@ -54,34 +53,34 @@ server.post("/card/", (req, res) => {
     req.body.linkedin,
     req.body.github
   );
+*/
+  let response = {};
+  console.log(req.body);
 
-  let responseError = "";
-  console.log(foundUser);
-
-  if (isNaN(parseInt(foundUser.palette))) {
+  if (isNaN(parseInt(req.body.palette))) {
     response.success = false;
-    responseError = "Elige paleta de colores";
-  } else if (foundUser.name === "") {
+    response.error = "Elige paleta de colores";
+  } else if (req.body.name === "") {
     response.success = false;
-    responseError = "Falta el nombre";
-  } else if (foundUser.job === "") {
+    response.error = "Falta el nombre";
+  } else if (req.body.job === "") {
     response.success = false;
-    responseError = "Falta el puesto";
-  } else if (foundUser.photo === "") {
+    response.error = "Falta el puesto";
+  } else if (req.body.photo === "") {
     response.success = false;
-    responseError = "Falta la imagen";
-  } else if (foundUser.email === "") {
+    response.error = "Falta la imagen";
+  } else if (req.body.email === "") {
     response.success = false;
-    responseError = "Falta el email";
-  } else if (foundUser.phone === "") {
+    response.error = "Falta el email";
+  } else if (req.body.phone === "") {
     response.success = false;
-    responseError = "Falta el teléfono";
-  } else if (foundUser.linkedin === "") {
+    response.error = "Falta el teléfono";
+  } else if (req.body.linkedin === "") {
     response.success = false;
-    responseError = "Falta el usuario de linkedin";
-  } else if (foundUser.github === "") {
+    response.error = "Falta el usuario de linkedin";
+  } else if (req.body.github === "") {
     response.success = false;
-    responseError = "Falta el usuario de github";
+    response.error = "Falta el usuario de github";
   } else {
     const query = db.prepare(
       `INSERT INTO card (palette, name, job, photo, email, phone, linkedin, github) VALUES (?, ?, ?, ?, ?, ?, ?, ?)`
@@ -97,20 +96,28 @@ server.post("/card/", (req, res) => {
       req.body.github
     );
     response.success = true;
-    response.cardURL =
+
+    if( req.hostname === 'localhost' ) {
+      response.cardURL =
+      `http://localhost:${serverPort}/card/` +
+      result.lastInsertRowid;
+    }
+    else {
+      response.cardURL =
       "https://awesome-profile-card.herokuapp.com/card/" +
       result.lastInsertRowid;
+    }
+
+    
   }
-  res.json({ error: responseError });
+  res.json(response);
 
-  console.log(foundUser);
-
-  console.log("Petición tarjeta en /card");
-  console.log(req.body);
-  const response = {};
-
-  res.json({ response });
 });
+
+
+// static server
+const serverStaticPath = "./public";
+server.use(express.static(serverStaticPath));
 
 // modelo para hacer nuestro GET y POST cuando tengamos el fetch.
 // server.get('/card', (req, res) => {

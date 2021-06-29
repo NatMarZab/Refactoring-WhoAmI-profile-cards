@@ -78,7 +78,6 @@ function Main() {
   /* function handleCreateCard(ev) {
     ev.preventDefault();
   }*/
-
   // function Main() {
   //   const [palette, setPalette] = useState("1");
   //   const [name, setName] = useState("");

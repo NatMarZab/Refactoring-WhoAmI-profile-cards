@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/db059d8dff.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/static/css/main.0999a73d.chunk.css">
+    <title>Card preview</title>
+  </head>
+  <body>
+    <section class="maincontainer1">
+      <button class="maincontainer1__button js-btn-reset" type="reset">
+        <i class="far fa-trash-alt" aria-hidden="true"></i> Reset
+      </button>
+      <div class="maincontainer1__profilecard">
+        <div class="maincontainer1__text js-headerpreview border-preview1">
+          <h2 class="maincontainer1__title js-name h1-color1"><%= name %></h2>
+          <h3 class="maincontainer1__subtitle js-job"><%= job %></h3>
+        </div>
+        <div
+          class="maincontainer1__img js__profile-preview js__border-palette"
+          style="
+            background-image: url('<%= photo %>');"
+        ></div>
+        <nav class="maincontainer1__links-container js-footerpreview">
+          <a
+            href="tel:392384892"
+            class="maincontainer1__links js-telefono js__link__radius links1_1"
+            ><i
+              class="fas fa-mobile-alt js__link__pallete links1"
+              aria-hidden="true"
+            ></i></a
+          ><a
+            href="mailto:ivan@adalab.es"
+            class="maincontainer1__links js-mail js__link__radius links1_1"
+            ><i
+              class="far fa-envelope js__link__pallete links1"
+              aria-hidden="true"
+            ></i></a
+          ><a
+            href="https://www.linkedin.com/in/<%= linkedin %>"
+            class="maincontainer1__links js-linkedin js__link__radius links1_1"
+            ><i
+              class="fab fa-linkedin-in js__link__pallete links1"
+              aria-hidden="true"
+            ></i></a
+          ><a
+            href="https://github.com/<%= github %>"
+            class="maincontainer1__links js-git js__link__radius links1_1"
+            ><i
+              class="fab fa-github-alt js__link__pallete links1"
+              aria-hidden="true"
+            ></i
+          ></a>
+        </nav>
+      </div>
+    </section>
+  </body>
+</html>

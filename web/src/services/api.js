@@ -1,5 +1,5 @@
 const apiData = (data) => {
-  return fetch("https://awesome-profile-cards.herokuapp.com/card", {
+  return fetch("/card", {
     method: "POST",
     headers: {
       "content-type": "application/json",
