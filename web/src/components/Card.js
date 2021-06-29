@@ -5,7 +5,7 @@ import CardPreview from "./CardPreview";
 function Card(props) {
   return (
     <section className="maincontainer1">
-      <ResetBtn />
+      <ResetBtn handleReset={props.handleReset} />
       <CardPreview
         name={props.name}
         palette={props.palette}

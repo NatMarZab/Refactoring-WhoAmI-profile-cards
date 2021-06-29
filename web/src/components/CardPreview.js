@@ -7,7 +7,6 @@ function CardPreview(props) {
   return (
     <>
       <div className="maincontainer1__profilecard">
-        <ResetBtn handleReset={props.handleReset}/>
         <div
           className={`maincontainer1__text js-headerpreview border-preview${props.palette}`}
         >
