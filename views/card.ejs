@@ -17,11 +17,8 @@
   </head>
   <body>
     <section class="maincontainer1">
-      <button class="maincontainer1__button js-btn-reset" type="reset">
-        <i class="far fa-trash-alt" aria-hidden="true"></i> Reset
-      </button>
       <div class="maincontainer1__profilecard">
-        <div class="maincontainer1__text js-headerpreview border-preview1">
+        <div class="maincontainer1__text js-headerpreview border-preview1 <%= palette %>">
           <h2 class="maincontainer1__title js-name h1-color1"><%= name %></h2>
           <h3 class="maincontainer1__subtitle js-job"><%= job %></h3>
         </div>
@@ -32,15 +29,19 @@
         ></div>
         <nav class="maincontainer1__links-container js-footerpreview">
           <a
-            href="tel:392384892"
+            href="tel:<%= phone %>"
             class="maincontainer1__links js-telefono js__link__radius links1_1"
+            target="_blank"
+            title="telephone"
             ><i
               class="fas fa-mobile-alt js__link__pallete links1"
               aria-hidden="true"
             ></i></a
           ><a
-            href="mailto:ivan@adalab.es"
+            href="mailto:<%= email %>"
             class="maincontainer1__links js-mail js__link__radius links1_1"
+            target="_blank"
+            title="email"
             ><i
               class="far fa-envelope js__link__pallete links1"
               aria-hidden="true"
@@ -48,6 +49,8 @@
           ><a
             href="https://www.linkedin.com/in/<%= linkedin %>"
             class="maincontainer1__links js-linkedin js__link__radius links1_1"
+            target="_blank"
+            title="linkedin"
             ><i
               class="fab fa-linkedin-in js__link__pallete links1"
               aria-hidden="true"
@@ -55,6 +58,8 @@
           ><a
             href="https://github.com/<%= github %>"
             class="maincontainer1__links js-git js__link__radius links1_1"
+            target="_blank"
+            title="github"
             ><i
               class="fab fa-github-alt js__link__pallete links1"
               aria-hidden="true"
