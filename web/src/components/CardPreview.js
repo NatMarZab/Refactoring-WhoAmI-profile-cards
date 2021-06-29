@@ -1,11 +1,13 @@
 import React from "react";
 import Profile from "./Profile";
 import image from "../images/defaultAvatar.png";
+import ResetBtn from "./ResetBtn";
 
 function CardPreview(props) {
   return (
     <>
       <div className="maincontainer1__profilecard">
+        <ResetBtn handleReset={props.handleReset}/>
         <div
           className={`maincontainer1__text js-headerpreview border-preview${props.palette}`}
         >
