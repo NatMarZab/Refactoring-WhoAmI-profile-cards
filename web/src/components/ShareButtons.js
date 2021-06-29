@@ -4,12 +4,14 @@ function ShareButtons({ wholeCard }) {
       <nav>
         <p className="preview__paragraph">
           La tarjeta ha sido creada:
-          <a className="preview__url" href={wholeCard}>
+          <a className="preview__url" href={wholeCard} target="_blank" >
             Aquí está el link
           </a>{" "}
           <a
             className="preview__button"
-            href={`https://twitter.com/?lang=es=+ ${wholeCard}`}
+            href={`https://twitter.com/intent/tweet?ref_src=twsrc%5Etfw&url=Conoce%20mi%20tarjeta%20de%20presentación:%20${wholeCard}&hashtags=openToWork,frontend`}
+           // href={`https://twitter.com/intent/tweet?text= + ${wholeCard}`}
+            target="_blank"
           >
             <i className="fab fa-twitter preview__twitter"></i> Compartir en
             twitter

@@ -5,7 +5,6 @@ const server = express();
 
 //configurar servidor
 server.use(cors());
-server.use(express.json());
 server.use(express.json({ limit: "10mb" }));
 server.use(express.static("./public"));
 
@@ -28,11 +27,11 @@ const db = new Database("./src/database/awesome_db.db", {
 // endpoints
 
 server.get("/card/:id", (req, res) => {
-  console.log("/card");
+ // console.log("/card");
   // get card data
   const query = db.prepare(`SELECT * FROM card WHERE id = ?`);
   const cardData = query.get(req.params.id);
-  console.log(cardData);
+ // console.log(cardData);
 
   res.render("card", cardData);
 });
@@ -55,7 +54,7 @@ server.post("/card/", (req, res) => {
   );
 */
   let response = {};
-  console.log(req.body);
+  //console.log(req.body);
 
   if (isNaN(parseInt(req.body.palette))) {
     response.success = false;
